@@ -2,7 +2,7 @@
   Blog
 
 <:Body>
-  <div class="row">
+  <div class="posts">
     <div class="col-md-8">
       <h1>{{ store._blog_posts.size }} Posts</h1>
     </div>
@@ -10,7 +10,7 @@
       <:fields:text label="Search Posts:" value="{{ page._query }}" />
     </div>
   </div>
-  <div class="row">
+  <div class="post">
 
     {{ paginated_posts.each do |blog_post| }}
       <:blog:post model="{{ blog_post }}" />

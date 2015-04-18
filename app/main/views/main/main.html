@@ -4,7 +4,7 @@
 <:Body>
   <div class="container">
     <div class="header">
-      <ul class="nav nav-pills pull-right">
+      <ul class="nav navbar-nav pull-right">
         <:nav href="/">Home</:nav>
         {{ if Volt.current_user? }}
           <:nav href="/blog/new">New Post</:nav>
@@ -22,7 +22,6 @@
     <div class="footer">
       <p>&copy; Company {{ Time.now.year }}</p>
     </div>
-
   </div>
 
 <:Nav>

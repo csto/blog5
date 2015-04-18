@@ -2,18 +2,23 @@
   {{ _title }}
 
 <:Body>
-  <h1>
-    <a href="/blog/{{ _id }}">{{ _title }}</a>
-  </h1>
-
-  <p>{{ _body }}</p>
-
-  <div class="panel panel-default">
-    <div class="panel-body">
-      {{ if model.owner? }}
-        <a href="/blog/edit/{{ _id }}">Edit</a>
-        <a e-click="model.destroy">Delete</a>
-      {{ end }}
-      <b>Author: </b>{{ model.user.then(&:_name) }}
+  <a href="/blog/{{ _id }}" class="post">
+    <h1>
+      {{ _title }}
+    </h1>
+  
+    <div class='author'>
+      <span>By </span>{{ model.user.then(&:_name) }}
     </div>
-  </div>
+
+    <p>{{ _body }}</p>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        {{ if model.owner? }}
+          <a href="/blog/edit/{{ _id }}">Edit</a>
+          <a e-click="model.destroy">Delete</a>
+        {{ end }}
+      </div>
+    </div>
+  </a>

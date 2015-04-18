@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <% javascript_files.each do |javascript_file| %>
       <script src="<%= javascript_file %>"></script>
+      <script src="//cdn.jsdelivr.net/bootstrap.material-design/0.3.0/js/material.min.js"></script>
+      <script src="//cdn.jsdelivr.net/bootstrap.material-design/0.3.0/js/ripples.min.js"></script>
     <% end %>
 
     <% css_files.each do |css_file| %>
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.material-design/0.3.0/css/material.min.css">
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.material-design/0.3.0/css/ripples.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300|Fjalla+One' rel='stylesheet' type='text/css'>
       <link href="<%= css_file %>" media="all" rel="stylesheet" type="text/css" />
     <% end %>
   </head>
